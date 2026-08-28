@@ -32,12 +32,9 @@ An HTML test execution report generated using Newman is included in the Users-Mo
 
 ---Project Status---
 Module              Status
-
-Users API:        Completed
-
-Products API      In Progress
-
-Other Modules     Planned
+Users API:       Completed
+Products API:    In Progress
+Other Modules:   Planned
 
 
 ---Tester---
