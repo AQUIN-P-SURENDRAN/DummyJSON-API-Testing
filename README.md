@@ -29,6 +29,12 @@ The Users module contains API request and test cases for:
 ---Test Report---
 An HTML test execution report generated using Newman is included in the Users-Module folder.
 "Report: Users-Module/Newman-Users-Report.html"
+Test Results:
+- Total Requests: 4
+- Total Assertions: 4
+- Failed Tests: 0
+- Skipped Tests: 0
+- Average Response Time: 366 ms
 
 ---Project Status---
 Module              Status
