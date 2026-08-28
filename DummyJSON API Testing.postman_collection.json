@@ -1,0 +1,168 @@
+{
+  "info": {
+    "_postman_id": "a45e9005-d057-4737-bb8b-8ba759ca1ba2",
+    "name": "DummyJSON API Testing",
+    "description": "This Collection contain basic API tesing pratice using the DummyJSON API. It covers HTTP Methods such as \"GET, POST, PUT, PATCH , and DELETE along with response validation and different API testing scenarios.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57402367",
+    "_collection_link": "https://go.postman.co/collection/57402367-a45e9005-d057-4737-bb8b-8ba759ca1ba2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://dummyjson.com/users?limit=5&skip=10",
+          "protocol": "https",
+          "host": [
+            "dummyjson",
+            "com"
+          ],
+          "path": [
+            "users"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            },
+            {
+              "key": "skip",
+              "value": "10",
+              "type": "text"
+            }
+          ]
+        },
+        "description": "First Request was :Get all users for the server  \nSecond request was using params : requested for only 5 users  \nThired one was using params :requested to skip first 10 users and then give 5 users back"
+      },
+      "response": []
+    },
+    {
+      "name": "GET Single User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://dummyjson.com/users/29",
+          "protocol": "https",
+          "host": [
+            "dummyjson",
+            "com"
+          ],
+          "path": [
+            "users",
+            "29"
+          ]
+        },
+        "description": "\\->Requesting for only one \"Single user\""
+      },
+      "response": []
+    },
+    {
+      "name": "GET Search Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://dummyjson.com/users/search?q=Charlotte",
+          "protocol": "https",
+          "host": [
+            "dummyjson",
+            "com"
+          ],
+          "path": [
+            "users",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "Charlotte"
+            }
+          ]
+        },
+        "description": "\\->Requesting for a spcific user using \"Search\" params"
+      },
+      "response": []
+    },
+    {
+      "name": "Create new user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "",
+              "pm.test(\"Verify response code is 200 or 201\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Verify response time is below 1000 ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+              "});",
+              "",
+              "const response = pm.response.json();",
+              "",
+              "pm.test(\"Verify response contains expected fields\", function () {",
+              "    pm.expect(response).to.have.property(\"id\");",
+              "    pm.expect(response).to.have.property(\"firstName\");",
+              "    pm.expect(response).to.have.property(\"lastName\");",
+              "    pm.expect(response).to.have.property(\"age\");",
+              "});",
+              "",
+              "pm.test(\"Verify created user details\", function () {",
+              "    pm.expect(response.firstName).to.eql(\"Aquin\");",
+              "    pm.expect(response.lastName).to.eql(\"Tester\");",
+              "    pm.expect(response.age).to.eql(22);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"Aquin\",\n    \"lastName\": \"Tester\",\n    \"age\": 22\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dummyjson.com/users/add",
+          "protocol": "https",
+          "host": [
+            "dummyjson",
+            "com"
+          ],
+          "path": [
+            "users",
+            "add"
+          ]
+        },
+        "description": "\\->In this request i have created a new user  \n\\->also implementing some Test regarding new user creation\n\n:Tests->Status code validation\n\n\\->Response time validation\n\n\\->Expected response fields (id,firstname,lastname,age)\n\n\\->crossed checked the new user exist"
+      },
+      "response": []
+    }
+  ]
+}
