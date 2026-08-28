@@ -27,8 +27,8 @@ The Users module contains API request and test cases for:
 * Error messages
 
 ---Test Report---
-An HTML test execution report generated using Newman is included in the Users-Module folder.
-"Report: Users-Module/Newman-Users-Report.html"
+The API test collection was executed using Newman.
+->[View Live Newman Test Report](https://aquin-p-surendran.github.io/DummyJSON-API-Testing/Users-Module/Newman-Users-Report.html)
 Test Results:
 - Total Requests: 4
 - Total Assertions: 4
