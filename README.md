@@ -26,25 +26,32 @@ The Users module contains API request and test cases for:
 * Response structure
 * Error messages
 
----Test Report---
+---Test Report For users module---
 The API test collection was executed using Newman.
 ->[View Live Newman Test Report](https://aquin-p-surendran.github.io/DummyJSON-API-Testing/Users-Module/Newman-Users-Report.html)
+
+---Test Report For Product module---
+The API test collection was executed using Newman.
+->[View Live Newman Test Report](https://aquin-p-surendran.github.io/DummyJSON-API-Testing/Users-Module/Newman-Users-Report.html)
+
+
 Test Results:
-- Total Requests: 4
-- Total Assertions: 4
-- Failed Tests: 0
+- Total Requests: 9
+- Total Assertions: 25
+- Passed Assertions: 24
+- Failed Tests: 1
 - Skipped Tests: 0
 - Average Response Time: 366 ms
 
 ---Project Status---
-Module              Status
 
-Users API:       Completed
+Module Status
 
-Products API:    In Progress
+Users API: Completed
 
-Other Modules:   Planned
+Products API: Completed
 
+Other Modules: Planned
 
 ---Tester---
 Aquin P Surendran
