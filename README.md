@@ -26,6 +26,27 @@ The Users module contains API request and test cases for:
 * Response structure
 * Error messages
 
+---Product Module
+Test performed:
+* Retrieved all available products by removing the default pagination limit
+* Verified the total product count
+* Validated the product response structure
+* Verified the response time was below 1000 ms
+* Retrieved a single product
+* verified the single product is same as the request got
+* Verified the single product structure
+*Retrieved a single specific product
+*Verified the single specific product structure
+*verified the error massages
+*verifed the error responsed code
+*Verfied the Product ID generated
+*Verifed the created Title matches what we sent
+*Verifed the Price matches the created product
+*Verifed the Response structure of the Created product
+
+
+
+
 ---Test Report For users module---
 The API test collection was executed using Newman.
 ->[View Live Newman Test Report](https://aquin-p-surendran.github.io/DummyJSON-API-Testing/Users-Module/Newman-Users-Report.html)
