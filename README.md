@@ -32,7 +32,7 @@ The API test collection was executed using Newman.
 
 ---Test Report For Product module---
 The API test collection was executed using Newman.
-->[View Live Newman Test Report](https://github.com/AQUIN-P-SURENDRAN/DummyJSON-API-Testing/blob/main/Product-module/Newman-Products-Report.html)
+->[View Live Newman Test Report](https://AQUIN-P-SURENDRAN.github.io/DummyJSON-API-Testing/Product-module/Product-module/Newman-Products-Report.html)
 
 
 Test Results:
