@@ -26,25 +26,23 @@ The Users module contains API request and test cases for:
 * Response structure
 * Error messages
 
----Product Module
+---Product Module---
 Test performed:
-* Retrieved all available products by removing the default pagination limit
-* Verified the total product count
-* Validated the product response structure
-* Verified the response time was below 1000 ms
-* Retrieved a single product
-* verified the single product is same as the request got
-* Verified the single product structure
-*Retrieved a single specific product
-*Verified the single specific product structure
-*verified the error massages
-*verifed the error responsed code
-*Verfied the Product ID generated
-*Verifed the created Title matches what we sent
-*Verifed the Price matches the created product
-*Verifed the Response structure of the Created product
-
-
+- Retrieved all available products by removing the default pagination limit
+- Verified the total product count
+- Validated the product response structure
+- Verified the response time was below 1000 ms
+- Retrieved a single product
+- Verified the requested product matches the returned product
+- Validated the single product response structure
+- Retrieved a specific product
+- Validated the specific product response structure
+- Verified error messages for invalid requests
+- Verified the error response status code
+- Verified the Product ID generated for the created product
+- Verified the created product title matches the request
+- Verified the created product price matches the request
+- Validated the response structure of the created product
 
 
 ---Test Report For users module---
